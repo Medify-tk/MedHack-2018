@@ -1,0 +1,31 @@
+#uk{
+  top: 0;
+}
+#uk li {
+  font-size: 50px;
+  list-style: none;
+  position: absolute;
+  opacity: 0;
+}
+#uk li.active {
+  animation: fadeInOut .6s ease;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}

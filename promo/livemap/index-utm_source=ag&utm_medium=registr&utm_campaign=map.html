@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Активный гражданин. Лучшие места Москвы</title>
+    <style type="text/css">
+        #map {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            transition: top 200ms ease-in-out;
+        }
+
+        body.activate-preloader #map {
+            top: -290px;
+        }
+
+        body.activate-preloader .preloader {
+            visibility: visible;
+            top: 0;
+        }
+
+        .preloader.preloader--bottom {
+            position: relative;
+            bottom: inherit;
+            top: -290px;
+        }
+
+        #scroll {
+            height: 600vh;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="152x152" href="https://ag.mos.ru/promo/livemap/apple-touch-icon.6685effe.png">
+    <link rel="icon" type="image/png" href="https://ag.mos.ru/promo/livemap/favicon-32x32.b3b93583.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ag.mos.ru/promo/livemap/favicon-16x16.b458f769.png" sizes="16x16">
+    <link rel="manifest" href="manifest.2d78a4d8.js">
+    <link rel="mask-icon" href="https://ag.mos.ru/promo/livemap/safari-pinned-tab.fbbb08c1.svg" color="#5bbad5">
+    <link rel="stylesheet" type="text/css" href="main.bc25b62b.css">
+    <!-- Yandex.Metrika counter {{{ -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter24583919 = new Ya.Metrika({ id: 24583919, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true });
+                    w.yaCounter24742073 = new Ya.Metrika({ id: 24742073, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, triggerEvent: true });
+                    w.yaCounter14112952 = new Ya.Metrika({ id: 14112952, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true });
+                } catch (e) {
+                }
+            });
+            var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/24742073" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div><img src="https://mc.yandex.ru/watch/14112952" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div><img src="https://mc.yandex.ru/watch/24583919" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- }}} Yandex.Metrika counter -->
+
+    <!-- Google Analytics {{{ -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-52662983-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- }}} Google Analytics -->
+
+    <!-- Google Tag Manager {{{ -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQZ9ZB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PQZ9ZB');</script>
+    <!-- }}} Google Tag Manager -->
+
+    <!-- MosRu Counter {{{ -->
+    <script type="text/javascript" id="statsmosru" src="https://stats.mos.ru/counter.js" onLoad="statsMosRuCounter()" defer="defer"
+        async="true"></script>
+    <!-- }}} MosRu Counter -->
+
+</head>
+
+<body style="display: block;">
+    <header style="z-index: 1001;">
+        <div class="wrapper">
+            <div class="logo"><a href="../../index.html"><img src="logo.92f7c4b6.svg" alt="ag-logo"></a></div>
+        </div>
+        <div style="margin-left: 16%;">
+            <h1 style="font-size: 100px;">Обзор лучших<br /> мест Москвы</h1>
+            <h2 style="font-size: 25px;font-weight: 400;line-height: 37px;padding: 12px 0 0 6px;opacity: .7;">
+                Москва постоянно дает новые поводы влюбиться в себя.
+                <br />Все лето москвичи рассказывали нам о любимых местах <br /> в столице, а мы из их ответов сделали подборку<br
+                /> самых-самых парков, театров, арт-пространств<br /> и других мест. Москвичи плохого не посоветуют!
+            </h2>
+        </div>
+        <div class="menu">
+            <div class="row menu__link">
+                <div class="col-xs-10 menu__header">
+                    <p>Лучшие <br>места</p>
+                </div>
+                <div class="col-xs-2">
+                    <div class="menu__icon"></div>
+                </div>
+            </div>
+            <div class="row menu__links no-scroll">
+                <menu>
+                    <div class="col-xs-10 menu__header">
+                        <p>Лучшие <br>места</p>
+                    </div>
+                    <nav>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="gorky.html">Лучшие парки</a>
+                            </strong>
+                            <a href="gorky.html" class="menu__item">Парк Горького</a><a href="kolomenskoe.html" class="menu__item">Коломенское</a><a
+                                href="ermitazh.html" class="menu__item">Сад «Эрмитаж»</a><a href="zaryadie.html" class="menu__item">Парк
+                                «Зарядье»</a><a href="sokolniki.html" class="menu__item">Парк «Сокольники»</a><a href="vdnh.html"
+                                class="menu__item">ВДНХ</a><a href="tsaritsyno.html" class="menu__item">Парк Царицыно</a><a href="izmaylovskii.html"
+                                class="menu__item">Измайловский парк</a><a href="kuskovo.html" class="menu__item">Усадьба Кусково</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="zaryadie-most.html">Лучшие виды</a>
+                            </strong>
+                            <a href="zaryadie-most.html" class="menu__item">Парящий мост в «Зарядье»</a><a href="vorobyovy.html"
+                                class="menu__item">Площадка на Воробьевых горах</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="phontan-druzhbi.html">Места для фото</a>
+                            </strong>
+                            <a href="phontan-druzhbi.html" class="menu__item">Фонтан «Дружба народов»<br>на ВДНХ</a><a href="gum.html"
+                                class="menu__item">ГУМ</a><a href="tram.html" class="menu__item">Трамвай №39</a><a href="pedestrian-zone.html"
+                                class="menu__item">Рыбный и Богоявленский<br> переулки, Биржевая площадь</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="museum.html">Лучшие музеи</a>
+                            </strong>
+                            <a href="museum.html" class="menu__item">Кремль</a><a href="tretyakovskaya.html" class="menu__item">Третьяковская
+                                галерея</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="taganka.html">Любимые театры</a>
+                            </strong>
+                            <a href="taganka.html" class="menu__item">Театр на Таганке</a><a href="sovremennik.html" class="menu__item">Театр
+                                «Современник»</a><a href="sodruzestvo.html" class="menu__item">Театр «Содружество актетров
+                                Таганки»</a><a href="operetta.html" class="menu__item">Театр оперетты</a><a href="nemirovich.html"
+                                class="menu__item">Театр им. Станиславского и Немировича-Данченко</a><a href="tuz.html" class="menu__item">Московский
+                                театр юного зрителя</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="library.html">Лучшая библиотека</a>
+                            </strong>
+                            <a href="library.html" class="menu__item">Библиотека № 23 им. М. Горького</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="meridian.html">Центры культуры</a>
+                            </strong>
+                            <a href="meridian.html" class="menu__item">Центр кульутры и искусства «Меридиан»</a><a href="zelenograd.html"
+                                class="menu__item">Культурный центр «Зеленоград»</a><a href="novoslobodskii.html" class="menu__item">Культурный
+                                центр «Новослободский»</a><a href="salute.html" class="menu__item">Культурный центр «Салют»</a><a
+                                href="vatutinki.html" class="menu__item">Культурный центр «Ватутинки»</a><a href="moskvich.html"
+                                class="menu__item">Культурный центр «Москвич»</a><a href="moskvorechie.html" class="menu__item">Культурный
+                                центр «Москворечье»</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="rabochiy-kolkhoznitsa.html">Любимые памятники</a>
+                            </strong>
+                            <a href="rabochiy-kolkhoznitsa.html" class="menu__item">Скульптура «Рабочий и колхозница»</a>
+                        </div>
+                        <div class="nav-group">
+                            <strong>
+                                <a href="kremlevskaya-naberezhnaya.html">Места для прогулок</a>
+                            </strong>
+                            <a href="kremlevskaya-naberezhnaya.html" class="menu__item">Кремлевская набережная</a><a href="arbat.html"
+                                class="menu__item">Арбат</a><a href="nikolskaya.html" class="menu__item">Никольская улица</a><a
+                                href="vorobyevskaya-naberezhnaya.html" class="menu__item">Воробьевская набережная</a>
+                        </div>
+                        <div class="col-als">
+                            <a href="https://www.artlebedev.ru/">
+                                <span class="studio-logo"></span>
+                            </a>
+                            <div class="col-als-shield">
+                                <p>Задизайнено<br>в&nbsp;<a href="http://artlebedev.ru">Студии Артемия Лебедева</a></p>
+                                <p><a href="http://artlebedev.ru">Информация о&nbsp;сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="footer__copyright">
+                            <p>© Активный Гражданин</p>
+                        </div>
+                    </nav>
+                </menu>
+            </div>
+        </div>
+    </header>
+    <div id="map"></div>
+    <div id="scroll"></div>
+    <div class="preloader preloader--bottom">
+        <div class="next">Далее</div>
+        <div class="title">Парк Горького</div>
+        <div class="spinner">
+            <svg class="progress-ring" width="100" height="100">
+                <circle class="progress-ring__circle" stroke="#E7408A" stroke-width="7" fill="transparent" r="25" cx="50" cy="50" />
+            </svg>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/three/ColladaLoader.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        const MENU = {};
+
+        MENU.parent = document.querySelector('.menu');
+        MENU.menu = MENU.parent.querySelector('.menu__link');
+
+        MENU.menu.addEventListener('click', e => {
+            if (MENU.parent.classList.contains('menu_expanded')) {
+                MENU.parent.classList.remove('menu_expanded');
+            } else {
+                MENU.parent.classList.add('menu_expanded');
+            }
+        });
+
+        document.querySelector('body').addEventListener('click', e => {
+            if (!e.target.closest('.menu')) {
+                MENU.parent.classList.remove('menu_expanded');
+            }
+        });
+    </script>
+</body>
+
+</html>
