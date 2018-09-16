@@ -3077,18 +3077,20 @@ p {
 						<div class="row fullscreen align-items-center justify-content-center">
 							<div class="banner-content col-lg-6 col-md-12">
 								<h1 class="text-uppercase">
-									НАРОДНЫЕ</h1>  <br><br><ul style="position: absolute; margin-top: 65px" id="uk">
-                    <li><h1 class="text-uppercase">ДЛЯ</h1></li>
-                    <li><h1 class="text-uppercase">Manchester</h1></li>
-                    <li><h1 class="text-uppercase">Liverpool</h1></li>
-                    <li class="last"><h1 class="text-uppercase">Skegness</h1></li>
+									МЕДИЦИНА</h1>  <br><br><ul style="position: absolute; margin-top: 65px" id="uk">
+                    <li><h1 class="text-uppercase">КАЧЕСТВЕННАЯ</h1></li>
+                    <li><h1 class="text-uppercase">ДОСТУПНАЯ</h1></li>
+                    <li><h1 class="text-uppercase">БЕСПЛАТНАЯ</h1></li>
+                    <li class="last"><h1 class="text-uppercase">ВЕЖЛИВАЯ</h1></li>
                   </ul><h1 class="text-uppercase">
-									КЛИНИКИ
+									ДЛЯ ЛЮДЕЙ
 								</h1>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.
+                  Наша миссия заключается в том, чтобы высококачественное медицинское обслуживание и услуги стали доступнее для граждан.<br>
+
+Мы создадим сообщество людей, которые хотят улучшить своё здоровье, а также здоровье своих близких и родных.
 								</p>
-								<button class="primary-btn2 mt-20 text-uppercase ">Get Started<span class="lnr lnr-arrow-right"></span></button>
+								<button class="primary-btn2 mt-20 text-uppercase js-show-register">Присоединиться<span class="lnr lnr-arrow-right"></span></button>
 							</div>
 							<div class="col-lg-6 d-flex align-self-end img-right">
 								<img class="girl"  class="img-fluid" src="landing/header-img.png" alt="">

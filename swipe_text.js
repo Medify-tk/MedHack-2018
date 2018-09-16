@@ -18,7 +18,7 @@ function classAddRemove(el, i) {
   el.classList.remove('active');
   setTimeout(function () {
     el.classList.add('active');
-  }, i * 1500);
+  }, i * 1600);
 }
 
 // function text() {
